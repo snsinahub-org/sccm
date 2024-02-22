@@ -21,6 +21,8 @@ jobs:
           Get-CMDevice                    
       - name: run a script
         run: |
-          ${{ github.workspace }}/samples/CommonFunctions.ps1
+          echo "<pre>" >> $GITHUB_STEP_SUMMARY
+          ${{ github.workspace }}/samples/CommonFunctions.ps1 >> $GITHUB_STEP_SUMMARY
+          echo "</pre>" >> $GITHUB_STEP_SUMMARY
         
 
