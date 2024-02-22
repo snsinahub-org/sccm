@@ -46,5 +46,5 @@ Set-Location 'C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsol
 Import-Module .\ConfigurationManager.psd1
 Set-Location SNS:
 Get-CMDevice
-$odata = Connect-CMAdminService;
+# $odata = Connect-CMAdminService;
 New-Application -Name "Test" -Description "Description";
