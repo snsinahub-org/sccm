@@ -20,9 +20,8 @@ jobs:
           Set-Location SNS:
           Get-CMDevice                    
       - name: run a script
-        run: |
-          echo "<pre>" >> $GITHUB_STEP_SUMMARY
-          ${{ github.workspace }}/samples/CommonFunctions.ps1 >> $GITHUB_STEP_SUMMARY
-          echo "</pre>" >> $GITHUB_STEP_SUMMARY
+        run: |          
+          powershell -File ${{ github.workspace }}/samples/CommonFunctions.ps1 
+          
         
 
