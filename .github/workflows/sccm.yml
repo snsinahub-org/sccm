@@ -1,0 +1,20 @@
+name: SCCM
+
+on:
+  workflow_dispatch:
+
+jobs:
+  get-to-sccm:
+    runs-on:
+      - self-hosted
+      - sccm
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: connect to sccm
+        run: |
+          Set-Location 'C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin'
+          Import-Module .\ConfigurationManager.psd1
+          Set-Location SNS:
