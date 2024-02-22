@@ -20,6 +20,6 @@ jobs:
           Set-Location SNS:
           Get-CMDevice
           ${ GITHUB_WORKDI
-          powershell -File ${{ github.workspace }}/samples/CommonFunctions.ps1
-        shell: powershell
+          ${{ github.workspace }}/samples/CommonFunctions.ps1
+        
 
