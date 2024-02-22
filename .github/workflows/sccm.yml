@@ -19,6 +19,7 @@ jobs:
           Import-Module .\ConfigurationManager.psd1
           Set-Location SNS:
           Get-CMDevice          
+          ${{ github.workspace }}/samples/CommonFunctions.ps1
       - name: run a script
         run: |
           ${{ github.workspace }}/samples/CommonFunctions.ps1
