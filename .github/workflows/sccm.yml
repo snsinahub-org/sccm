@@ -19,3 +19,7 @@ jobs:
           Import-Module .\ConfigurationManager.psd1
           Set-Location SNS:
           Get-CMDevice
+
+      - name: get users
+        run: |
+          Get-CMUser
