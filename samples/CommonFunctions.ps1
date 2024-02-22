@@ -42,5 +42,9 @@ function New-Application {
     Invoke-CMPost -odata $odata -body $body -query "wmi/SMS_Application";
 }
 
+Set-Location 'C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin'
+Import-Module .\ConfigurationManager.psd1
+Set-Location SNS:
+Get-CMDevice
 $odata = Connect-CMAdminService;
 New-Application -Name "Test" -Description "Description";
